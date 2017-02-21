@@ -1,0 +1,19 @@
+1
+s1 route66
+s2 66route
+
+2
+
+nee equals kijkt naar value == kijkt naar of ze hetzelfde betekenen
+
+3
+string.length() ja
+
+4
+charAt()
+
+5
+compareTo(string)
+
+6
+parseInt(string)
