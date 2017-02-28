@@ -10,10 +10,10 @@ import java.util.ArrayList;
  */
 public class Klas {
     private String klasCode;
-    private Leerling leerling;
-    private String lerling;
-    private ArrayList<String> leerlingen = new ArrayList<String>();
-    private ArrayList<Double> cijfers = new ArrayList<Double>();
+
+
+    private ArrayList<Leerling> leerlingen = new ArrayList<Leerling>();
+
     private Integer aantalLerlingen = 0;
 
     public Klas(String klasCode){
@@ -21,26 +21,28 @@ public class Klas {
     }
     public void voegLeerlingToe(Leerling leerling){
 
-        this.leerling=leerling;
-        lerling = leerling.naam;
-        leerlingen.add(lerling);
-        cijfers.add(0.0);
+        
+        leerlingen.add(leerling);
+
         aantalLerlingen  += 1;
     }
     public void wijzigCijfer(String naam, Double cijfer){
-        if (leerlingen.contains(naam)) {
-            Integer s = leerlingen.indexOf(naam);
-            cijfers.set(s, cijfer);
-        }
+            for (Leerling i : leerlingen){
+                if (i.getNaam() ==  naam){
+                    i.setCijfer(cijfer);
+                }
+
+            }
+
+
     }
     public Integer aantalLeerlingen(){
         return aantalLerlingen;
     }
     public String toString(){
-
         String s = "In klas "+ klasCode + " zitten de volgende leerlingen: \n";
-        for (String leerling : leerlingen) {
-            s= s+ leerling + " heeft cijfer: "+ cijfers.get(leerlingen.indexOf(leerling))+ "\n";
+        for (Leerling leerling : leerlingen) {
+            s= s+ leerling + "\n";
         }
 
         return s;
