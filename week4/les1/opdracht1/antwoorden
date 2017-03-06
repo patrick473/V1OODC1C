@@ -1,0 +1,23 @@
+
+a) g = h; wel toegestaan
+b) g = new Huis();  niet toegestaan
+c) h = g; wel  toegestaan
+d) h = (Huis)g;  niet toegestaan
+e) if (g instanceof Huis) h = (Huis)g;  niet toegestaan
+f) h.super.laatsteRenovatie = 1980; wel toegestaan
+
+
+g) g.laatsteRenovatie = 1985; binnenrenovatie =
+buitenrenovatie =  1985
+h) h.laatsteRenovatie = 1990; binnenrenovatie = 1990
+buitenrenovatie = 1985
+i) ((Huis)g).laatsteRenovatie = 1995; binnenrenovatie = 1990
+buitenrenovatie = 1995
+j) h.renoveer(2000, 2005); binnenrenovatie = 2000
+buitenrenovatie = 2005
+k) g.isGeisoleerd = true; wel toegestaan
+
+l) h.berekenHuur(); roept methode van klasse  huis aan
+m) g.berekenHuur(); roept methode van klasse  gebouw aan
+n) g.isoleer();  niet toegestaan
+o) ((Huis)g).isoleer(); wel  toegestaan
