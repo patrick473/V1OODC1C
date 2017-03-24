@@ -1,1 +1,3 @@
-# V1OODC1C
+# OODC practica
+# Patrick Kottman
+
